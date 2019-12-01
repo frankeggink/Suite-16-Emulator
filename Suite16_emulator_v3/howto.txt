@@ -1,0 +1,24 @@
+HOWTO
+------
+NOTE:
+Suite16_emulator_v3 already contains the hexloader code
+So the step "create hexloader" can be skipped
+
+#create hexloader
+tasm -s -h -c -g0 -t16 hexloader.asm
+binToMem.exe < hexloader.lst > output
+paste array in visual studio solution
+
+
+# assemble jump.asm
+tasm -s -h -c -g0 -t16 jump.asm out.hex
+
+# final steps
+run simulator
+copy code from out.hex (assembled jump.asm) to clipboard
+past this inside console 
+
+
+
+NOTE:
+jmp.hex contains the assmbled jump.asm file
