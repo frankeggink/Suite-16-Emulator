@@ -7,7 +7,7 @@ So the step "create hexloader" can be skipped
 #create hexloader
 tasm -s -h -c -g0 -t16 hexloader_new.asm
 binToMem.exe < hexloader_new.lst > output
-paste array in visual studio solution
+paste array in .ino file
 
 # compile binToHex
 gcc -o binToHex binToHex.c
@@ -20,16 +20,10 @@ binToHex < jump_2.lst > jump_2.hex
 
 # final steps
 run simulator
+open a terminal program (putty) to connect to the board
 copy code from jump_2.hex to clipboard
 past this inside console 
 
-NOTE:
-putty takes about 4 minutes to load the hexfile (when pasting)
-TeraTerm can do it in 42 seconds (send file)
-Some terminal send the data too quick, leads to corrupting on the nucleo side !!
-
-NOTE:
-if you don't see a prompt "Suite16 hex Loader >" type ::::::::: (9 times :)
 
 NOTE:
 jump_2.hex contains the assembled jump_2.asm file
